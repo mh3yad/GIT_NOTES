@@ -39,15 +39,18 @@ git diff HEAD                     -> View difference between HEAD and Working Di
 ## Undo
 ```
 git rm --cashed file              -> untrack
-git restore file                  -> discard mofification
-= git checkout file
 
-git reset file                    -> restore file as HEAD state
-=git restore --staged file + git restore file
-=
+git restore file                  -> discard mofification
+git checkout file                 -> discard mofification
+
+git restore --staged file         -> unstage  
+git reset file                    -> unstage
+
+
 
 git reset --hard HEAD             -> unstage and discard modification (copy from HEAD to index and w.t)
-=git checkout HEAD file
+git checkout HEAD file
+
 git reset HEAD~1 | HEAD@{1} (from reflog)
 git revert HEAD~3                 -> Revert the changes specified by the fourth last commit in HEAD and create a new commit with the reverted changes.
 git commit --amend                -> modify last commit msg and compined  staged changes with last commit content
