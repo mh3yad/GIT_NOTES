@@ -32,31 +32,33 @@ git reflog -> log brnaches tips updates
 ## diff
 ```
 git diff commit1 commit2 | branch1 branch2 
-git diff                -> View difference between Stage and Working Directory
-git diff --staged       ->  View difference between HEAD and Stage
-git diff HEAD           -> View difference between HEAD and Working Directory
+git diff                          -> View difference between Stage and Working Directory
+git diff --staged                 ->  View difference between HEAD and Stage
+git diff HEAD                     -> View difference between HEAD and Working Directory
 ```
 ## Undo
 ```
-git rm --cashed file        -> untrack
-git restore file            -> discard mofification
-git checkout file           -> restore file as HEAD state
+git rm --cashed file              -> untrack
+git restore file                  -> discard mofification
+= git checkout file
+
+git reset file                    -> restore file as HEAD state
 =git restore --staged file + git restore file
-git restore --staged file   -> unstage
-=git reset file
-git reset --hard HEAD       -> unstage and discard modification (copy from HEAD to index and w.t)
+=
+
+git reset --hard HEAD             -> unstage and discard modification (copy from HEAD to index and w.t)
 =git checkout HEAD file
 git reset HEAD~1 | HEAD@{1} (from reflog)
-git revert HEAD~3           -> Revert the changes specified by the fourth last commit in HEAD and create a new commit with the reverted changes.
-git commit --amend          -> modify last commit msg and compined  staged changes with last commit content
+git revert HEAD~3                 -> Revert the changes specified by the fourth last commit in HEAD and create a new commit with the reverted changes.
+git commit --amend                -> modify last commit msg and compined  staged changes with last commit content
 ```
 ## Tags
 ```
 lightweight tags
-git tag v1 -> piointer, no commit created
+git tag v1                        -> piointer, no commit created
 git show v1
 annotated tags -a
-git tag -a v2 -> create object on .git/object
+git tag -a v2                     -> create object on .git/object
 ```
 ## Branching
 ```
