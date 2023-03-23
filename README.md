@@ -45,7 +45,7 @@ git checkout file                 -> discard mofification
 
 git restore --staged file         -> unstage  
 git reset file                    -> unstage
-![image](https://user-images.githubusercontent.com/55093384/227140805-0f374889-d0cd-42e3-9a6f-d0a897ae8206.png)
+![mine](https://user-images.githubusercontent.com/55093384/227140805-0f374889-d0cd-42e3-9a6f-d0a897ae8206.png)
 
 
 
